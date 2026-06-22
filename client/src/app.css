@@ -1,0 +1,58 @@
+:root {
+  --red: #e82127;
+  --red-dim: #a3171b;
+  --bg: #080808;
+  --surface-1: #0f0f0f;
+  --surface-2: #161616;
+  --surface-3: #1e1e1e;
+  --border: #262626;
+  --border-subtle: #1a1a1a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #888;
+  --text-muted: #555;
+  --green: #00d4aa;
+  --green-dim: #007a63;
+  --amber: #f5a623;
+  --blue: #4aa3e8;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.6);
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--surface-1); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }

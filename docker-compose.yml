@@ -1,0 +1,18 @@
+services:
+  tesla-view:
+    build: .
+    image: tesla-view:latest
+    container_name: tesla-view
+    restart: unless-stopped
+    ports:
+      - "4895:4895"
+    volumes:
+      - tesla-view-data:/data
+    environment:
+      - PORT=4895
+      - DATA_DIR=/data
+      - NODE_ENV=production
+
+volumes:
+  tesla-view-data:
+    driver: local
