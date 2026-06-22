@@ -15,12 +15,12 @@
   const trunk = $derived(vs.rt === 1);
   const anyOpen = $derived(frontLeft || frontRight || rearLeft || rearRight || frunk || trunk);
 
-  const windowMap = [
+  const windowMap = $derived([
     { label: 'FL', val: vs.fd_window },
     { label: 'FR', val: vs.fp_window },
     { label: 'RL', val: vs.rd_window },
     { label: 'RR', val: vs.rp_window },
-  ];
+  ]);
   const anyWindowOpen = $derived(windowMap.some(w => w.val > 0));
 
   async function toggleLock() {

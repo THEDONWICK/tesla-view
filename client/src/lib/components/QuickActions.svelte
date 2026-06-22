@@ -7,7 +7,7 @@
   let busy = $state<string | null>(null);
   const status = $derived($vehicleStatus);
 
-  async function run(label: string, cmd: string, params?: Record<string, unknown>) {
+  async function run(label: string, cmd: string, params: Record<string, unknown> | undefined = undefined) {
     busy = cmd;
     try {
       const r = await sendCommand(vehicleId, cmd, params);
